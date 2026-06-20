@@ -2,29 +2,39 @@
 // MANIPULACION DE PROPIEDADES EN OBJETOS LITERALES
 
 const libro = {
-    titulo: 'El Matador',
-    autor: 'Ramon Aguirre',
-    anio: 1997,
-    //Paso N7
-    descripcion: function(){
-        console.log("Este libro llamado " + this.titulo + " fue creado por " + this.autor);
-    }
+  titulo: 'El Matador',
+  autor: 'Ramon Aguirre',
+  anio: 1997,
+  descripcion: function () {
+    console.log(
+      "Este libro llamado " + this.titulo + " fue creado por " + this.autor
+    );
+  }
 };
 
-// Paso N2 dot notation
-const clave = "titulo";
-console.log(libro[])
+// Paso N2 dot notation / bracket con variable
+console.log(libro.titulo); // "El Matador"
+
 // Paso N3
-console.log(libro["autor"]);
+const elAutor = "autor";
+console.log(libro[elAutor]);
+
+// Paso N4: agregar con bracket
+const nuevaProp = "genero";
+libro[nuevaProp] = "Novela";
 console.log(libro);
-// Paso N4
-libro.genero = "Genero Masculino";
-console.log(libro);
-// Paso N5
+
+// Paso N5: modificar
 libro.anio = 2025;
 console.log(libro);
-// Paso 6
-delete libro.genero;
+
+// Paso N6: (tu consola)
 console.log(libro);
-// Paso 8
+
+// Paso N7: validación antes de eliminar
+if ("genero" in libro) {
+  delete libro.genero;
+}
+
+// Paso N8
 libro.descripcion();
