@@ -12,8 +12,8 @@ const libro = {
 };
 
 // Paso N2 dot notation
-console.log(libro.titulo);
-console.log(libro);
+const clave = "titulo";
+console.log(libro[])
 // Paso N3
 console.log(libro["autor"]);
 console.log(libro);
